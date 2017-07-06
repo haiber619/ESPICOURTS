@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>EQUIPOS REGISTRADOS</h3>
+</div>
+<a class="btn btn-primary " href="{% url 'espicourts:equipos_crear' %}" >Registrar Equipo</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>NOMBRE DEL EQUIPO</th>
+                <th>CATEGORIA EQUIPO </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in equipos%}
+            <tr>
+                <td>{{ c.id }}</td>
+                <td>{{ c.nombre_equipo}}</td>
+                <td>{{ c.categoria_equipo}}</td>
+                <td>
+                     <a href="{% url 'espicourts:equipos_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:equipos_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:equipos_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock%}}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+</head>
+<body>
+<center><h4>Listado usuarios</h4></center>
+<p>
+<a href="{% url 'inicio:canchas_crear' %}" button class="waves-effect waves-light btn"> Nueva cancha</a>
+</p>
+<table border="2">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in usuario%}
+        <tr>
+            <td>{{ c.id}}</td>
+            <td>{{ c.first_name}}</td>
+            <td>{{ c.last_name}}</td>
+            <td>{{ c.username}}</td>
+
+            <td>
+                 <a href="{% url 'inicio:canchas_detalle' c.id %}" button class="waves-effect waves-light btn"> Detalle</a>
+            </td>
+            <td>
+                 <a href="{% url 'inicio:canchas_actualizar' c.id %}" button class="waves-effect waves-light btn"> Actualizar</a>
+            </td>
+            <td>
+                 <a href="{% url 'inicio:canchas_eliminar' c.id %}" button class="waves-effect waves-light btn"> Eliminar</a>
+            </td>
+
+        </tr>
+        {% endfor %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    </tbody>
+
+</table>

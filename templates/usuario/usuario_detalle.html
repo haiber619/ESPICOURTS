@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+
+    <center><h4>Detalle {{ detalle_cancha.nombre_cancha }}</h4></center>
+    <h5>
+    <table>
+        <tr>
+            <td>CANCHA</td><td>{{ detalle_cancha.nombre_cancha}}</td>
+        </tr>
+        <tr>
+            <td>DIRECCION DE LA CANCHA</td><td>{{ detalle_cancha.direccion_cancha}}</td>
+        </tr>
+    </table>
+    </h5>
+    <a href="{% url 'inicio:canchas_listar' %}" button class="waves-effect waves-light btn"> Listar Canchas</a>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</body>

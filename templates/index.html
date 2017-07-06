@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+</head>
+<body>
+<center>
+<div class="container">
+    {% csrf_token %}
+    <div class="z-depth-1 grey lighten-4 row" style="display:
+	    inline-block;padding: 20px 80px 0px 80px; border: 5px solid #EEE;">
+    <h4>Login</h4>
+	<form action={% url 'inicio:login' %}>
+        <div class="row">
+		        <div class="input-field col s12">
+                    {{ form.username }}
+                </div>
+        </div>
+        <div class="row">
+		        <div class="input-field col s12">
+                    {{ form.password }}
+                </div>
+        </div>
+		<div class="form-group text-center">
+			<input type="submit" value="Iniciar sesión" class="btn btn-raised btn-danger">
+		</div>
+	</form>
+</div>
+</div>
+</center>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</body>
+</html>

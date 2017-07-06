@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block extrastatic %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+    <title>{%block title%} Title {% endblock %}</title>
+<!--este se usa para agregar nuetros link de las distintas librerias-->
+
+</head>
+<body>
+<div class="container">
+    {% block navbar %}
+    <nav class="navbar navbar-default" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">ESPICOURTS</a>
+        </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Usuarios</a></li>
+                <li><a href="{% url 'espicourts:equipos_listar' %}">Equipos</a></li>
+                <li><a href="{% url 'espicourts:canchas_listar' %}">Canchas</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Partidos <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'espicourts:partidos_listar' %}">Partidos</a></li>
+                        <li><a href="#">Eventos del partido</a></li>
+                    </ul></li>
+                <li><a href="#">Torneos</a></li>
+                <li><a href="#">Reservas</a></li>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                </div>
+                    <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Sesion <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cambiar Contraseña</a></li>
+                    </ul>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
+</div>
+<div class="container">
+<!--bloque para el header-->
+    {% block header %}
+    {% endblock %}
+<!--bloque para el contenido que es renderizado-->
+    {% block content %}
+    {% endblock %}
+<!--bloque para el footer-->
+    {% block footer %}
+<footer class="container-fluid text-center bg-lightgray">
+
+        <div class="copyrights" style="margin-top:25px;">
+            <p>ESPICOURTS © 2017, All Rights Reserved
+                <br>
+                <span>Web Design By: Los propios</span></p>
+        </div>
+</footer>
+
+
+    {% endblock %}
+<!--bloque para el las libreias extra necesarias-->
+</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block extrajs %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="panel panel-primary" align="center">
+    <h3>USUARIOS</h3>
+</div>
+<div class="form-horizontal">
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label>NOMBRE</label>
+                    <input class="form-control" type="text" name="first_name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label>APELLIDOS</label>
+                    <input class="form-control" type="text" name="last_name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label>NOMBRE DE USUARIO</label>
+                    <input class="form-control" type="text" name="username">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label>CORREO</label>
+                    <input class="form-control" type="text" name="email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label>CONTRASEÑA</label>
+                    <input class="form-control" type="password" name="password1">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label>CONFIRMAR CONTRASEÑA</label>
+                    <input class="form-control" type="password" name="password2">
+                </div>
+            </div>
+        </div>
+        <br>
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary ">Guardar</button>
+        <a href="{% url 'espicourts:usuarios_listar' %}" button class="btn btn-success"> Listar Usuarios</a>
+    </form>
+</div>
+{% endblock %}

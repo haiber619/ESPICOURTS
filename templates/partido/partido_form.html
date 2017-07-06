@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="panel panel-primary" align="center">
+    <h3>PARTIDOS</h3>
+</div>
+<div class="form-horizontal">
+    <form method="post">
+        {% csrf_token %}
+       {{ partido_form.as_p }}
+        <br>
+        <button type="submit" class="btn btn-primary ">Guardar</button>
+        <a href="{% url 'espicourts:partidos_listar' %}" button class="btn btn-success"> Listar Partidos</a>
+    </form>
+</div>
+{% endblock %}
