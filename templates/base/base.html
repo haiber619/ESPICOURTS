@@ -11,52 +11,47 @@
 
 </head>
 <body>
+{% block navbar %}
 <nav class="navbar navbar-default" role="navigation">
-<div class="container">
-    {% block navbar %}
-
-  <!-- El logotipo y el icono que despliega el menú se agrupan
-       para mostrarlos mejor en los dispositivos móviles -->
+    <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">ESPICOURTS</a>
         </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="{% url 'espicourts:equipos_listar' %}">Equipos</a></li>
-                <li><a href="{% url 'espicourts:canchas_listar' %}">Canchas</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Partidos <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{% url 'espicourts:partidos_listar' %}">Partidos</a></li>
-                        <li><a href="#">Eventos del partido</a></li>
-                    </ul></li>
-                <li><a href="#">Torneos</a></li>
-                <li><a href="#">Reservas</a></li>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-                    <button type="submit" class="btn btn-default">Enviar</button>
-            </form>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Sesion <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Cambiar Contraseña</a></li>
-                    </ul>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Cerrar Sesion</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <ul class="nav navbar-nav navbar-static-top">
+            <li><a href="{%  url 'espicourts:usuarios_listar' %}">Usuarios</a></li>
+            <li><a href="{% url 'espicourts:equipos_listar' %}">Equipos</a></li>
+            <li><a href="{% url 'espicourts:canchas_listar' %}">Canchas</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Partidos <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menubar">
+                    <li><a href="{% url 'espicourts:partidos_listar' %}">Partidos</a></li>
+                    <li><a href="#">Eventos del partido</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Torneos</a></li>
+            <li><a href="#">Reservas</a></li>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Buscar">
+            </div>
+                <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Sesion <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Cambiar Contraseña</a></li>
+                    <li><a href="{% url 'salir' %}">Salir</a></li>
+                </ul>
+             </li>
+        </ul>
     </div>
-{% endblock %}
-</div>
+</nav>
 <div class="container">
+{% endblock %}
 <!--bloque para el header-->
     {% block header %}
     {% endblock %}
@@ -65,16 +60,13 @@
     {% endblock %}
 <!--bloque para el footer-->
     {% block footer %}
-<footer class="container-fluid text-center bg-lightgray">
-
+    <footer class="container-fluid text-center bg-lightgray">
         <div class="copyrights" style="margin-top:25px;">
             <p>ESPICOURTS © 2017, All Rights Reserved
                 <br>
                 <span>Web Design By: Los propios</span></p>
         </div>
 </footer>
-
-
     {% endblock %}
 <!--bloque para el las libreias extra necesarias-->
 </div>

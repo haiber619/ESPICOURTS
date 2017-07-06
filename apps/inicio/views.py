@@ -1,9 +1,10 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.http.response import HttpResponse
+from django.contrib.auth.views import login
+from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls.base import reverse, reverse_lazy
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.views.generic.list import ListView
 from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm
 from apps.inicio.models import User, Cancha, Equipo, Partido
@@ -135,3 +136,36 @@ class EliminarPartido(DeleteView):
     model = Partido
     template_name = 'partido/partidos_eliminar.html'
     success_url = reverse_lazy('espicourts:partidos_listar')
+
+
+class Login(FormView):
+    # Establecemos la plantilla a utilizar
+    template_name = 'login.html'
+    # Le indicamos que el formulario a utilizar es el formulario de autenticación de Django
+    form_class = AuthenticationForm
+    # Le decimos que cuando se haya completado exitosamente la operación nos redireccione a la url bienvenida de la aplicación personas
+    success_url = reverse_lazy("espicourts:canchas_listar")
+
+    def dispatch(self, request, *args, **kwargs):
+        # Si el usuario está autenticado entonces nos direcciona a la url establecida en success_url
+        if request.user.is_authenticated():
+            return HttpResponseRedirect(self.get_success_url())
+        # Sino lo está entonces nos muestra la plantilla del login simplemente
+        else:
+            return super(Login, self).dispatch(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        login(self.request, form.get_user())
+        return super(Login, self).form_valid(form)
+
+
+class DetalleUsuario(DetailView):
+    model = User
+    template_name = "usuario/usuario_detalle.html"
+    context_object_name = "detalle_usuario"
+
+
+class ListarUsuario(ListView):
+    model = User
+    template_name = "usuario/usuario_listar.html"
+    context_object_name = "usuarios"

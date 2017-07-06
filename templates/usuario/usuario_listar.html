@@ -1,46 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-</head>
-<body>
-<center><h4>Listado usuarios</h4></center>
-<p>
-<a href="{% url 'espicourts:usuarios_crear' %}" button class="waves-effect waves-light btn"> Nuevo usuario</a>
-</p>
-<table border="2">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Nombres</th>
-            <th>Apellidos</th>
-            <th>Username</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for c in usuario%}
-        <tr>
-            <td>{{ c.id}}</td>
-            <td>{{ c.first_name}}</td>
-            <td>{{ c.last_name}}</td>
-            <td>{{ c.username}}</td>
-
-            <td>
-                 <a href="{% url 'inicio:canchas_detalle' c.id %}" button class="waves-effect waves-light btn"> Detalle</a>
-            </td>
-            <td>
-                 <a href="{% url 'inicio:canchas_actualizar' c.id %}" button class="waves-effect waves-light btn"> Actualizar</a>
-            </td>
-            <td>
-                 <a href="{% url 'inicio:canchas_eliminar' c.id %}" button class="waves-effect waves-light btn"> Eliminar</a>
-            </td>
-
-        </tr>
-        {% endfor %}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    </tbody>
-
-</table>
+{% extends 'base/base.html' %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>USUARIOS REGISTRADOS</h3>
+</div>
+<a class="btn btn-primary " href="{% url 'espicourts:equipos_crear' %}" >Registrar Equipo</a>
+<br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>USERNAME</th>
+                <th>NOMBRE DEL USUARIO</th>
+                <th>APELLIDOS DEL USUARIO </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in usuarios%}
+            <tr>
+                <td>{{ c.username }}</td>
+                <td>{{ c.first_name}}</td>
+                <td>{{ c.last_name}}</td>
+                <td>
+                     <a href="{% url 'espicourts:usuario_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:equipos_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:equipos_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock%}}
