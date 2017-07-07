@@ -10,7 +10,7 @@ class Equipo(models.Model):
     class Meta:
         db_table='equipo'
     def __str__(self):
-        return  "%s %s " % (self.nombre_equipo,self.categoria_equipo)
+        return  "%s " % (self.nombre_equipo)
 
 
 class Jugador(models.Model):
@@ -36,7 +36,7 @@ class Cancha(models.Model):
     class Meta:
         db_table='cancha'
     def __str__(self):
-        return "%s %s" % (self.nombre_cancha,self.direccion_cancha)
+        return "%s " % (self.nombre_cancha)
 
 
 class Partido(models.Model):
@@ -54,17 +54,19 @@ class Partido(models.Model):
     class Meta:
         db_table='partido'
     def __str__(self):
-        return "%s %s %s %s %s" % (self.fecha_partido,self.hora_inicio,self.hora_fin,
+        """return "%s %s %s %s %s" % (self.fecha_partido,self.hora_inicio,self.hora_fin,
                                 self.resultado,self.estado_partido)
+        """
+        return "%s %s" % (self.id,self.fecha_partido)
 
 
 class EventoPartido(models.Model):
-    partido=models.ManyToManyField(Partido)
+    partido=models.ForeignKey(Partido)
     eventos=((1,'Marcacion del gol'),(2,'Falta'),(3,'Tarjeta amarilla'),
              (4,'Tarjeta azul'),(5,'Tarjeta roja'),(6,'Cambio de jugador'))
     tipo_evento=models.SmallIntegerField(choices=eventos)
     hora_evento=models.TimeField()
-    jugador=models.ManyToManyField(User)
+    jugador=models.ForeignKey(User)
     class Meta:
         db_table='eventos_partido'
     def __str__(self):

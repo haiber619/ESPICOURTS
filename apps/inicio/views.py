@@ -6,14 +6,9 @@ from django.urls.base import reverse, reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.views.generic.list import ListView
-from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm
-from apps.inicio.models import User, Cancha, Equipo, Partido
+from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm
+from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido
 
-class CrearUsuario(CreateView):
-    model = User
-    template_name = 'usuario/usuario_form.html'
-    form_class = UsuarioForm
-    success_url = reverse_lazy('espicouruts:usuarios_listar')
 
 class DetalleCancha(DetailView):
     model = Cancha
@@ -134,7 +129,7 @@ def EditarPartido(request,id_partido):
 
 class EliminarPartido(DeleteView):
     model = Partido
-    template_name = 'partido/partidos_eliminar.html'
+    template_name = 'partido/partido_eliminar.html'
     success_url = reverse_lazy('espicourts:partidos_listar')
 
 
@@ -169,3 +164,73 @@ class ListarUsuario(ListView):
     model = User
     template_name = "usuario/usuario_listar.html"
     context_object_name = "usuarios"
+
+
+def CrearUsuario(request):
+    if request.method == 'POST':
+        form = UsuarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('espicourts:usuarios_listar')
+    else:
+        form=UsuarioForm()
+    return render(request,'usuario/usuario_form.html',{'usuario_form':form})
+
+
+def EditarUsuario(request,id_usuario):
+    usuario=User.objects.get(id=id_usuario)
+    if request.method == 'GET':
+        form = UsuarioForm(instance=usuario)
+    else:
+        form = UsuarioForm(request.POST,instance=usuario)
+        if form.is_valid()  :
+            form.save()
+        return redirect('espicourts:usuarios_listar')
+    return render(request,'usuario/usuario_form.html',{'usuario_form':form})
+
+
+class EliminarUsuario(DeleteView):
+    model = User
+    template_name = 'usuario/usuario_eliminar.html'
+    success_url = reverse_lazy('espicourts:usuarios_listar')
+
+
+class DetalleEvento(DetailView):
+    model = EventoPartido
+    template_name = "eventos_partido/evento_detalle.html"
+    context_object_name = "detalle_evento"
+
+
+class ListarEvento(ListView):
+    model = EventoPartido
+    template_name = "eventos_partido/evento_listar.html"
+    context_object_name = "eventos"
+
+
+def CrearEvento(request):
+    if request.method == 'POST':
+        form = EventoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:eventos_listar'))
+    else:
+        form=EventoForm()
+    return render(request,'eventos_partido/evento_form.html',{'evento_form':form})
+
+
+def EditarEvento(request,id_evento):
+    evento=EventoPartido.objects.get(id=id_evento)
+    if request.method == 'GET':
+        form = EventoForm(instance=evento)
+    else:
+        form = EventoForm(request.POST,instance=evento)
+        if form.is_valid()  :
+            form.save()
+        return redirect('espicourts:eventos_listar')
+    return render(request,'eventos_partido/evento_form.html',{'evento_form':form})
+
+
+class EliminarEvento(DeleteView):
+    model = EventoPartido
+    template_name = 'eventos_partido/evento_eliminar.html'
+    success_url = reverse_lazy('espicourts:eventos_listar')

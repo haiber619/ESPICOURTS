@@ -2,7 +2,8 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 from django.contrib.auth.models import User
 
-from apps.inicio.models import Cancha, Equipo, Partido
+from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido
+
 
 class UsuarioForm(UserCreationForm):
     class Meta:
@@ -79,4 +80,28 @@ class PartidoForm(forms.ModelForm):
             'cancha': forms.Select(attrs={'class':'form-control'}),
             'local': forms.Select(attrs={'class': 'form-control'}),
             'visitante': forms.Select(attrs={'class': 'form-control'}),
+        }
+
+
+class EventoForm(forms.ModelForm):
+    class Meta:
+        model = EventoPartido
+        fields = [
+            'partido',
+            'tipo_evento',
+            'hora_evento',
+            'jugador'
+        ]
+        labels = {
+            'partido':'Partido',
+            'tipo_evento':'Tipo de evento',
+            'hora_evento':'Hora del evento',
+            'jugador':'Jugador'
+
+        }
+        widgets = {
+            'partido': forms.Select(attrs={'class': 'form-control'}),
+            'tipo_evento': forms.Select(attrs={'class': 'form-control'}),
+            'hora_evento': forms.TimeInput(attrs={'class':'form-control'}),
+            'jugador': forms.Select(attrs={'class': 'form-control'}),
         }

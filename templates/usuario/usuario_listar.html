@@ -3,7 +3,7 @@
 <div class="panel panel-primary" align="center">
     <h3>USUARIOS REGISTRADOS</h3>
 </div>
-<a class="btn btn-primary " href="{% url 'espicourts:equipos_crear' %}" >Registrar Equipo</a>
+<a class="btn btn-primary " href="{% url 'espicourts:usuarios_crear' %}" >Registrar Usuario</a>
 <br>
 <div class="table-responsive">
     <table class="table table-hover">
@@ -24,10 +24,10 @@
                      <a href="{% url 'espicourts:usuario_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
                 </td>
                 <td>
-                     <a href="{% url 'espicourts:equipos_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
+                     <a href="{% url 'espicourts:usuarios_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
                 </td>
                 <td>
-                     <a href="{% url 'espicourts:equipos_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
+                     <a href="{% url 'espicourts:usuarios_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
                 </td>
             </tr>
             {% endfor %}

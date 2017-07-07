@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>EVENTOS DEL PARTIDO</h3>
+</div>
+<a class="btn btn-primary " href="{% url 'espicourts:eventos_crear' %}" >Registrar Evento</a>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th># PARTIDO</th>
+                <th>TIPO DE EVENTO</th>
+                <th>HORA DEL EVENTO</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in eventos%}
+            <tr>
+                <td>{{ c.partido.id }}</td>
+                <td>{{ c.tipo_evento}}</td>
+                <td>{{ c.hora_evento}}</td>
+                <td>
+                     <a href="{% url 'espicourts:evento_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:eventos_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:eventos_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock%}

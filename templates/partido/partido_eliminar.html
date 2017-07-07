@@ -1,15 +1,15 @@
 {% extends 'base/base.html' %}
 {% block content %}
 <div class="panel panel-primary" align="center">
-    <h3>¿Desea eliminar {{user.username}}?</h3>
+    <h3>¿Desea eliminar {{cancha.nombre_cancha }}?</h3>
 </div>
 <div class="form-horizontal">
     <form method="post">
         {% csrf_token %}
-       {{ form }}
+       {{ equipo_form }}
         <br>
         <button type="submit" class="btn btn-success ">Si, eliminar</button>
-        <a href="{% url 'espicourts:usuarios_listar' %}" button class="btn btn-danger">Cancelar</a>
+        <a href="{% url 'espicourts:canchas_listar' %}" button class="btn btn-danger">Cancelar</a>
     </form>
 </div>
 {% endblock %}
