@@ -76,18 +76,28 @@ class EventoPartido(models.Model):
 class Torneo(models.Model):
     t_torneo=((1,'T.relampago'),(2,'Campeonato'))
     tipo_torneo=models.SmallIntegerField(choices=t_torneo,null=True)
-    partido = models.ManyToManyField(Partido)
     nombre_torneo=models.CharField('Nombre torneo',max_length=30)
     fecha_inicio = models.DateField()
     fecha_final = models.DateField()
     premio=models.TextField('Premios',max_length=100)
-    estados=((1,'No iniciado'),(2,'En proceso'),(3,'Finalizado'))
+    estados=((1,'No iniciado'),(2,'En proceso'),(3,'Octavos de final'),(4,'Cuartos de final'),
+             (5, 'Semifinales'),(6,'Finales'),(7,'Finalizado'))
     estado_torneo=models.SmallIntegerField(choices=estados)
     class Meta:
         db_table='torneo'
     def __str__(self):
         return "%s %s %s %s %i" % (self.nombre_torneo,self.fecha_inicio,self.fecha_final,
                                 self.premio,self.estado_torneo)
+
+
+class Torneo_Partido(models.Model):
+    torneo=models.ForeignKey(Torneo)
+    partido=models.ForeignKey(Partido)
+    class Meta:
+        db_table='torneo_partido'
+    def __str__(self):
+        return "%s %s " % (self.torneo,self.partido)
+
 
 
 class Reserva(models.Model):

@@ -4,7 +4,7 @@ from apps.inicio.views import DetalleCancha, ListarCancha, CrearCancha, EditarCa
     ListarEquipo, CrearEquipo, EditarEquipo, EliminarEquipo, CrearPartido, DetallePartido, ListarPartido, \
     EliminarPartido, EditarPartido, CrearUsuario, DetalleUsuario, ListarUsuario, EliminarUsuario, EditarUsuario, \
     DetalleEvento, ListarEvento, CrearEvento, EditarEvento, EliminarEvento, DetalleJugador, ListarJugador, CrearJugador, \
-    EditarJugador, EliminarJugador
+    EditarJugador, EliminarJugador, DetalleTorneo, ListarTorneo, CrearTorneo, EditarTorneo, EliminarTorneo
 
 urlpatterns = [
     url(r'^canchas_detalle/(?P<pk>\d+)/$', DetalleCancha.as_view(), name='canchas_detalle'),
@@ -37,4 +37,9 @@ urlpatterns = [
     url(r'^jugadores_crear', CrearJugador, name='jugadores_crear'),
     url(r'^jugadores_actualizar/(?P<id_jugador>\d+)/$', EditarJugador,name='jugadores_actualizar'),
     url(r'^jugadores_eliminar/(?P<pk>\d+)/$', EliminarJugador.as_view(),name='jugadores_eliminar'),
+    url(r'^torneos_detalle/(?P<pk>\d+)/$', DetalleTorneo.as_view(), name='torneo_detalle'),
+    url(r'^torneos_listar', ListarTorneo.as_view(), name='torneos_listar'),
+    url(r'^torneos_crear', CrearTorneo, name='torneos_crear'),
+    url(r'^torneos_actualizar/(?P<id_jugador>\d+)/$', EditarTorneo,name='torneos_actualizar'),
+    url(r'^torneos_eliminar/(?P<pk>\d+)/$', EliminarTorneo.as_view(),name='torneos_eliminar'),
 ]

@@ -6,8 +6,8 @@ from django.urls.base import reverse, reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.views.generic.list import ListView
-from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm
-from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador
+from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm, TorneoForm
+from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo
 
 
 class DetalleCancha(DetailView):
@@ -275,3 +275,44 @@ class EliminarJugador(DeleteView):
     model = Jugador
     template_name = 'jugador/jugador_eliminar.html'
     success_url = reverse_lazy('espicourts:jugadores_listar')
+
+
+class DetalleTorneo(DetailView):
+    model = Torneo
+    template_name = "torneo/torneo_detalle.html"
+    context_object_name = "detalle_torneo"
+
+
+class ListarTorneo(ListView):
+    model = Torneo
+    template_name = "torneo/torneo_listar.html"
+    context_object_name = "torneos"
+
+
+def CrearTorneo(request):
+    if request.method == 'POST':
+        form = TorneoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:torneos_listar'))
+    else:
+        form=TorneoForm()
+    return render(request,'torneo/torneo_form.html',{'torneo_form':form})
+
+
+def EditarTorneo(request,id_torneo):
+    torneo=Torneo.objects.get(id=id_torneo)
+    if request.method == 'GET':
+        form = TorneoForm(instance=torneo)
+    else:
+        form = TorneoForm(request.POST,instance=torneo)
+        if form.is_valid()  :
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:torneos_listar'))
+    return render(request,'torneo/torneo_form.html',{'torneo_form':form})
+
+
+class EliminarTorneo(DeleteView):
+    model = Torneo
+    template_name = 'torneo/torneo_eliminar.html'
+    success_url = reverse_lazy('espicourts:torneos_listar')

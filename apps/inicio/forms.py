@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 from django.contrib.auth.models import User
 
-from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido, Jugador
+from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo
 
 
 class UsuarioForm(UserCreationForm):
@@ -137,4 +137,33 @@ class JugadorForm(forms.ModelForm):
             'sexo' : forms.Select(attrs={'class': 'form-control'}),
             'equipo' : forms.Select(attrs={'class': 'form-control'}),
             'usuario' : forms.Select(attrs={'class': 'form-control'}),
+        }
+
+
+class TorneoForm(forms.ModelForm):
+    class Meta:
+        model = Torneo
+        fields = [
+            'tipo_torneo',
+            'nombre_torneo',
+            'fecha_inicio',
+            'fecha_final',
+            'premio',
+            'estado_torneo',
+        ]
+        labels = {
+            'tipo_torneo' : 'Tipo de torneo',
+            'nombre_torneo' : 'Nombre del torneo',
+            'fecha_inicio' : 'Fecha de inicio del torneo',
+            'fecha_final' : 'Fecha final del torneo',
+            'premio' : 'Premios del torneo',
+            'estado_torneo' : 'Estado del torneo'
+        }
+        widgets = {
+            'tipo_torneo': forms.Select(attrs={'class': 'form-control'}),
+            'nombre_torneo': forms.TextInput(attrs={'class':'form-control'}),
+            'fecha_inicio': forms.DateInput(attrs={'class':'form-control'}),
+            'fecha_final': forms.DateInput(attrs={'class':'form-control'}),
+            'premio': forms.TextInput(attrs={'class':'form-control'}),
+            'estado_torneo': forms.Select(attrs={'class': 'form-control'})
         }
