@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 from django.contrib.auth.models import User
 
-from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido
+from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido, Jugador
 
 
 class UsuarioForm(UserCreationForm):
@@ -104,4 +104,37 @@ class EventoForm(forms.ModelForm):
             'tipo_evento': forms.Select(attrs={'class': 'form-control'}),
             'hora_evento': forms.TimeInput(attrs={'class':'form-control'}),
             'jugador': forms.Select(attrs={'class': 'form-control'}),
+        }
+class JugadorForm(forms.ModelForm):
+    class Meta:
+        model = Jugador
+        fields = [
+            'identificacion',
+            'tipo_identifcacion',
+            'edad',
+            'telefono',
+            'perfil',
+            'sexo',
+            'equipo',
+            'usuario'
+        ]
+        labels = {
+            'identificacion':'Identificacion',
+            'tipo_identifcacion':'Tipo de identificacion',
+            'edad':'Edad',
+            'telefono':'Telefono',
+            'perfil':'Perfil del jugador',
+            'sexo':'Sexo',
+            'equipo':'Equipo',
+            'usuario':'Usuario'
+        }
+        widgets = {
+            'identificacion' : forms.TextInput(attrs={'class':'form-control'}),
+            'tipo_identifcacion' : forms.Select(attrs={'class': 'form-control'}),
+            'edad' : forms.TextInput(attrs={'class':'form-control'}),
+            'telefono' : forms.TextInput(attrs={'class':'form-control'}),
+            'perfil' : forms.TextInput(attrs={'class':'form-control'}),
+            'sexo' : forms.Select(attrs={'class': 'form-control'}),
+            'equipo' : forms.Select(attrs={'class': 'form-control'}),
+            'usuario' : forms.Select(attrs={'class': 'form-control'}),
         }

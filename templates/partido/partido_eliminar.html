@@ -6,8 +6,6 @@
 <div class="form-horizontal">
     <form method="post">
         {% csrf_token %}
-       {{ equipo_form }}
-        <br>
         <button type="submit" class="btn btn-success ">Si, eliminar</button>
         <a href="{% url 'espicourts:canchas_listar' %}" button class="btn btn-danger">Cancelar</a>
     </form>

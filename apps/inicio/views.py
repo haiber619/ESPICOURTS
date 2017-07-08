@@ -6,8 +6,8 @@ from django.urls.base import reverse, reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.views.generic.list import ListView
-from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm
-from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido
+from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm
+from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador
 
 
 class DetalleCancha(DetailView):
@@ -27,7 +27,7 @@ def CrearCancha(request):
         form = CanchaForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:canchas_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:canchas_listar'))
     else:
         form=CanchaForm()
     return render(request,'cancha/cancha_form.html',{'cancha_form':form})
@@ -41,7 +41,7 @@ def EditarCancha(request,id_cancha):
         form = CanchaForm(request.POST,instance=cancha)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:canchas_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:canchas_listar'))
     return render(request,'cancha/cancha_form.html',{'cancha_form':form})
 
 
@@ -68,7 +68,7 @@ def CrearEquipo(request):
         form = EquipoForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:equipos_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:equipos_listar'))
     else:
         form=EquipoForm()
     return render(request,'equipo/equipo_form.html',{'equipo_form':form})
@@ -82,7 +82,7 @@ def EditarEquipo(request,id_equipo):
         form = EquipoForm(request.POST,instance=equipo)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:equipos_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:equipos_listar'))
     return render(request,'equipo/equipo_form.html',{'equipo_form':form})
 
 
@@ -109,7 +109,7 @@ def CrearPartido(request):
         form = PartidoForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:partidos_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:partidos_listar'))
     else:
         form=PartidoForm()
     return render(request,'partido/partido_form.html',{'partido_form':form})
@@ -123,7 +123,7 @@ def EditarPartido(request,id_partido):
         form = PartidoForm(request.POST,instance=partido)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:partidos_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:partidos_listar'))
     return render(request,'partido/partido_form.html',{'partido_form':form})
 
 
@@ -135,7 +135,7 @@ class EliminarPartido(DeleteView):
 
 class Login(FormView):
     # Establecemos la plantilla a utilizar
-    template_name = 'login.html'
+    template_name = 'log/login.html'
     # Le indicamos que el formulario a utilizar es el formulario de autenticación de Django
     form_class = AuthenticationForm
     # Le decimos que cuando se haya completado exitosamente la operación nos redireccione a la url bienvenida de la aplicación personas
@@ -171,7 +171,7 @@ def CrearUsuario(request):
         form = UsuarioForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('espicourts:usuarios_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:usuarios_listar'))
     else:
         form=UsuarioForm()
     return render(request,'usuario/usuario_form.html',{'usuario_form':form})
@@ -185,7 +185,7 @@ def EditarUsuario(request,id_usuario):
         form = UsuarioForm(request.POST,instance=usuario)
         if form.is_valid()  :
             form.save()
-        return redirect('espicourts:usuarios_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:usuarios_listar'))
     return render(request,'usuario/usuario_form.html',{'usuario_form':form})
 
 
@@ -226,7 +226,7 @@ def EditarEvento(request,id_evento):
         form = EventoForm(request.POST,instance=evento)
         if form.is_valid()  :
             form.save()
-        return redirect('espicourts:eventos_listar')
+            return HttpResponseRedirect(reverse_lazy('espicourts:eventos_listar'))
     return render(request,'eventos_partido/evento_form.html',{'evento_form':form})
 
 
@@ -234,3 +234,44 @@ class EliminarEvento(DeleteView):
     model = EventoPartido
     template_name = 'eventos_partido/evento_eliminar.html'
     success_url = reverse_lazy('espicourts:eventos_listar')
+
+
+class DetalleJugador(DetailView):
+    model = Jugador
+    template_name = "jugador/jugador_detalle.html"
+    context_object_name = "detalle_jugador"
+
+
+class ListarJugador(ListView):
+    model = Jugador
+    template_name = "jugador/jugador_listar.html"
+    context_object_name = "jugadores"
+
+
+def CrearJugador(request):
+    if request.method == 'POST':
+        form = JugadorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:jugadores_listar'))
+    else:
+        form=JugadorForm()
+    return render(request,'jugador/jugador_form.html',{'jugador_form':form})
+
+
+def EditarJugador(request,id_jugador):
+    jugador=Jugador.objects.get(id=id_jugador)
+    if request.method == 'GET':
+        form = JugadorForm(instance=jugador)
+    else:
+        form = JugadorForm(request.POST,instance=jugador)
+        if form.is_valid()  :
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:jugadores_listar'))
+    return render(request,'jugador/jugador_form.html',{'jugador_form':form})
+
+
+class EliminarJugador(DeleteView):
+    model = Jugador
+    template_name = 'jugador/jugador_eliminar.html'
+    success_url = reverse_lazy('espicourts:jugadores_listar')

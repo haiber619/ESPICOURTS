@@ -1,44 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-</head>
-<body>
-<div class="container">
-<center>
-    <div class="z-depth-1 grey lighten-4 row" style="display:
-	    inline-block;padding: 20px 80px 0px 80px; border: 15px solid #EEE;">
-      <!--  <form action="{% url 'inicio:canchas_crear' %}" method="post">-->
-        <form method="post">
-            {% csrf_token %}
-            <h4>CANCHAS</h4>
-
-            <div class="row">
-
-    		    <div class="input-field col s12">
-
-    		    <label for="nombre_cancha">Nombre de la Cancha</label>
-    		    {{ form.nombre_cancha}}
-
-    		    </div>
-    	    </div>
-            <div class="row">
-
-    		    <div class="input-field col s12">
-
-    		    <label for="direccion_cancha">Direccion de la cancha</label>
-    		    {{ form.direccion_cancha}}
-
-    		    </div>
-    	    </div>
-
-            <button class="waves-effect waves-light btn" type="submit">Guardar</button>
-        </form>
-    </div>
-</center>
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="panel panel-primary" align="center">
+    <h3>JUGADORES</h3>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-</body>
+<div class="form-horizontal">
+    <form method="post">
+        {% csrf_token %}
+       {{ jugador_form }}
+        <br>
+        <button type="submit" class="btn btn-primary ">Guardar</button>
+        <a href="{% url 'espicourts:jugadores_listar' %}" button class="btn btn-success"> Listar Jugadores</a>
+    </form>
+</div>
+{% endblock %}

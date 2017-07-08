@@ -3,7 +3,8 @@ from django.conf.urls import url
 from apps.inicio.views import DetalleCancha, ListarCancha, CrearCancha, EditarCancha, EliminarCancha, DetalleEquipo, \
     ListarEquipo, CrearEquipo, EditarEquipo, EliminarEquipo, CrearPartido, DetallePartido, ListarPartido, \
     EliminarPartido, EditarPartido, CrearUsuario, DetalleUsuario, ListarUsuario, EliminarUsuario, EditarUsuario, \
-    DetalleEvento, ListarEvento, CrearEvento, EditarEvento, EliminarEvento
+    DetalleEvento, ListarEvento, CrearEvento, EditarEvento, EliminarEvento, DetalleJugador, ListarJugador, CrearJugador, \
+    EditarJugador, EliminarJugador
 
 urlpatterns = [
     url(r'^canchas_detalle/(?P<pk>\d+)/$', DetalleCancha.as_view(), name='canchas_detalle'),
@@ -31,4 +32,9 @@ urlpatterns = [
     url(r'^eventos_crear', CrearEvento, name='eventos_crear'),
     url(r'^eventos_actualizar/(?P<id_evento>\d+)/$', EditarEvento,name='eventos_actualizar'),
     url(r'^eventos_eliminar/(?P<pk>\d+)/$', EliminarEvento.as_view(),name='eventos_eliminar'),
+    url(r'^jugadores_detalle/(?P<pk>\d+)/$', DetalleJugador.as_view(), name='jugador_detalle'),
+    url(r'^jugadores_listar', ListarJugador.as_view(), name='jugadores_listar'),
+    url(r'^jugadores_crear', CrearJugador, name='jugadores_crear'),
+    url(r'^jugadores_actualizar/(?P<id_jugador>\d+)/$', EditarJugador,name='jugadores_actualizar'),
+    url(r'^jugadores_eliminar/(?P<pk>\d+)/$', EliminarJugador.as_view(),name='jugadores_eliminar'),
 ]

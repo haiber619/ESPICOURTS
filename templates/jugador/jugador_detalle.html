@@ -1,26 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-</head>
-<body>
-<div class="container">
-
-    <center><h4>Detalle {{ detalle_cancha.nombre_cancha }}</h4></center>
-    <h5>
-    <table>
-        <tr>
-            <td>CANCHA</td><td>{{ detalle_cancha.nombre_cancha}}</td>
-        </tr>
-        <tr>
-            <td>DIRECCION DE LA CANCHA</td><td>{{ detalle_cancha.direccion_cancha}}</td>
-        </tr>
-    </table>
-    </h5>
-    <a href="{% url 'inicio:canchas_listar' %}" button class="waves-effect waves-light btn"> Listar Canchas</a>
+{% extends 'base/base.html' %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>DETALLE:  {{ detalle_jugador.usuario.first_name }} {{ detalle_jugador.usuario.last_name }}</h3>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-</body>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <td>TIPO DE IDENTIFICACION</td>
+                <td>{{ detalle_jugador.tipo_identifcacion }}</td>
+            </tr>
+            <tr>
+                <td># IDENTIFICACION</td>
+                <td>{{ detalle_jugador.identificacion}}</td>
+            </tr>
+            <tr>
+                <td>NOMBRES</td>
+                <td>{{ detalle_jugador.usuario.first_name }}</td>
+            </tr>
+            <tr>
+                <td>APELLIDOS</td>
+                <td>{{ detalle_jugador.usuario.last_name }}</td>
+            </tr>
+            <tr>
+                <td>SEXO</td>
+                <td>{{ detalle_jugador.sexo}}</td>
+            </tr>
+            <tr>
+                <td>EDAD</td>
+                <td>{{ detalle_jugador.edad }}</td>
+            </tr>
+            <tr>
+                <td>TELEFONO</td>
+                <td>{{ detalle_jugador.telefono }}</td>
+            </tr>
+            <tr>
+                <td>PERFIL DEL JUGADOR</td>
+                <td>{{ detalle_jugador.perfil }}</td>
+            </tr>
+            <tr>
+                <td>EQUIPO</td>
+                <td>{{ detalle_jugador.equipo.nombre_equipo }}</td>
+            </tr>
+            <tr>
+                <td>USUARIO DEL SISTEMA</td>
+                <td>{{ detalle_jugador.usuario.username }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{% url 'espicourts:jugadores_listar' %}" button class="btn btn-success"> Listar Jugadores</a>
+</div>
+{% endblock %}
