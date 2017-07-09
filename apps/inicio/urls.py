@@ -4,9 +4,10 @@ from apps.inicio.views import DetalleCancha, ListarCancha, CrearCancha, EditarCa
     ListarEquipo, CrearEquipo, EditarEquipo, EliminarEquipo, CrearPartido, DetallePartido, ListarPartido, \
     EliminarPartido, EditarPartido, CrearUsuario, DetalleUsuario, ListarUsuario, EliminarUsuario, EditarUsuario, \
     DetalleEvento, ListarEvento, CrearEvento, EditarEvento, EliminarEvento, DetalleJugador, ListarJugador, CrearJugador, \
-    EditarJugador, EliminarJugador, DetalleTorneo, ListarTorneo, CrearTorneo, EditarTorneo, EliminarTorneo
+    EditarJugador, EliminarJugador, DetalleTorneo, ListarTorneo, CrearTorneo, EditarTorneo, EliminarTorneo, Index
 
 urlpatterns = [
+    url(r'^index/',Index, name='index'),
     url(r'^canchas_detalle/(?P<pk>\d+)/$', DetalleCancha.as_view(), name='canchas_detalle'),
     url(r'^canchas_listar', ListarCancha.as_view(), name='canchas_listar'),
     url(r'^canchas_crear', CrearCancha, name='canchas_crear'),

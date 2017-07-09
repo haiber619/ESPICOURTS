@@ -7,7 +7,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.views.generic.list import ListView
 from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm, TorneoForm
-from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo
+from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo, Torneo_Partido
 
 
 class DetalleCancha(DetailView):
@@ -316,3 +316,7 @@ class EliminarTorneo(DeleteView):
     model = Torneo
     template_name = 'torneo/torneo_eliminar.html'
     success_url = reverse_lazy('espicourts:torneos_listar')
+
+
+def Index(request):
+    return render(request,'index.html')
