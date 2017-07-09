@@ -86,8 +86,7 @@ class Torneo(models.Model):
     class Meta:
         db_table='torneo'
     def __str__(self):
-        return "%s %s %s %s %i" % (self.nombre_torneo,self.fecha_inicio,self.fecha_final,
-                                self.premio,self.estado_torneo)
+        return "%s " % (self.nombre_torneo)
 
 
 class Torneo_Partido(models.Model):
@@ -101,7 +100,7 @@ class Torneo_Partido(models.Model):
 
 
 class Reserva(models.Model):
-    fecha_reserva=models.DateField(auto_now=True)
+    fecha_reserva=models.DateField()
     hora_inicio=models.TimeField()
     hora_final = models.TimeField()
     cancha=models.OneToOneField(Cancha)

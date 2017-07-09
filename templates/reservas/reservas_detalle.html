@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% block title %}Detalle usuario{% endblock %}
+{% block fondopantalla %}{% endblock %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>DETALLE:  {{ detalle_usuario.first_name }} {{ detalle_usuario.last_name }}</h3>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <td>NICKNAME</td><td>{{ detalle_usuario.username }}</td>
+            </tr>
+            <tr>
+                <td>NOMBRES</td><td>{{ detalle_usuario.first_name }}</td>
+            </tr>
+            <tr>
+                <td>APELLIDOS</td><td>{{ detalle_usuario.last_name }}</td>
+            </tr>
+            <tr>
+                <td>CORREO </td><td>{{ detalle_usuario.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{% url 'espicourts:usuarios_listar' %}" button class="btn btn-success"> Listar Usuarios</a>
+</div>
+{% endblock %}
+

@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% block title %}Listar reservas{% endblock %}
+{% block fondopantalla %}{% endblock %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>RESERVAS</h3>
+</div>
+<a class="btn btn-primary " href="{% url 'espicourts:reservas_crear' %}" >Registrar Reserva</a>
+<br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>USUARIO</th>
+                <th>CANCHA</th>
+                <th>FECHA </th>
+                <th>HORA INICIO</th>
+                <th>ESTADO DE LA RESERVA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in reservas%}
+            <tr>
+                <td>{{ c.usuario.first_name }} {{ c.usuario.last_name }} </td>
+                <td>{{ c.cancha.nombre_cancha}}</td>
+                <td>{{ c.fecha_reserva}}</td>
+                <td>{{ c.hora_inicio}}</td>
+                <td>{{ c.estado_reserva}}</td>
+                <td>
+                     <a href="{% url 'espicourts:usuario_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:usuarios_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
+                </td>
+                <td>
+                     <a href="{% url 'espicourts:usuarios_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock%}}

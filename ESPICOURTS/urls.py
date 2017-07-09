@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import login, logout, password_reset, password_reset_done, password_reset_confirm, \
     password_reset_complete
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',login,{'template_name':'log/login.html'}, name="login"),
+    url(r'^$', login, {'template_name': 'log/login.html'}, name="login"),
+    url(r'^accounts/login', login, {'template_name': 'log/login.html'}, name="login"),
     url(r'^salir$', logout, name="salir", kwargs={'next_page': '/'}),
     url(r'^reset/password_reset', password_reset, {'template_name': 'log/password_reset_form.html',
                                                    'email_template_name': 'log/password_reset_email.html'},

@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% block title %}Detalle torneo{% endblock %}
+{% block fondopantalla %}{% endblock %}
+{% block  content%}
+<div class="panel panel-primary" align="center">
+    <h3>DETALLE DE LOS PARTIDOS RELACIONADOS AL TORNEO:  {{ detalle_torneo_partido.torneo.id}} {{ detalle_torneo_partido.torneo.estado_torneo}}</h3>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <td># TORNEO</td>
+                <td>{{ detalle_torneo_partido.torneo.id}}</td>
+            </tr>
+            <tr>
+                <td>ESTADO DEL TORNEO</td>
+                <td>{{ detalle_torneo_partido.torneo.estado_torneo}}</td>
+            </tr>
+            <tr>
+                <td># PARTIDO</td>
+                <td>{{ detalle_torneo_partido.partido.id}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{% url 'espicourts:torneos_listar' %}" button class="btn btn-success"> Listar Torneos</a>
+    <a href="{% url 'espicourts:torneos_listar' %}" button class="btn btn-primary"> Listar partidos</a>
+</div>
+{% endblock %}
+

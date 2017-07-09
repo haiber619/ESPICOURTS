@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import login
@@ -8,8 +7,9 @@ from django.urls.base import reverse, reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.views.generic.list import ListView
-from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm, TorneoForm
-from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo, Torneo_Partido
+from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm, TorneoForm, \
+    TorneoPartidoForm, ReservaForm
+from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo, Torneo_Partido, Reserva
 
 
 class DetalleCancha(DetailView):
@@ -24,7 +24,6 @@ class ListarCancha(ListView):
     context_object_name = "canchas"
 
 
-@login_required(login_url='login')
 def CrearCancha(request):
     if request.method == 'POST':
         form = CanchaForm(request.POST)
@@ -323,3 +322,62 @@ class EliminarTorneo(DeleteView):
 
 def Index(request):
     return render(request,'index.html')
+
+
+
+class DetalleTorneoPartido(DetailView):
+    model = Torneo_Partido
+    template_name = "torneo_partido/torneo_partido_detalle.html"
+    context_object_name = "detalle_torneo_partido"
+
+
+class ListarTorneoPartido(ListView):
+    model = Torneo_Partido
+    template_name = "torneo_partido/torneo_partido_listar.html"
+    context_object_name = "torneos_partidos"
+
+
+def CrearTorneoPartido(request):
+    if request.method == 'POST':
+        form = TorneoPartidoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:torneo_partido_listar'))
+    else:
+        form=TorneoPartidoForm()
+    return render(request,'torneo_partido/torneo_partido_form.html',{'torneo_partido_form':form})
+
+
+def EditarTorneoPartido(request,id_torneop):
+    torneopartido=Torneo_Partido.objects.get(id=id_torneop)
+    if request.method == 'GET':
+        form = TorneoPartidoForm(instance=torneopartido)
+    else:
+        form = TorneoPartidoForm(request.POST,instance=torneopartido)
+        if form.is_valid()  :
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:torneo_partido_listar'))
+    return render(request,'torneo_partido/torneo_partido_form.html',{'torneo_partido_form':form})
+
+
+class EliminarTorneoPartido(DeleteView):
+    model = Torneo_Partido
+    template_name = 'torneo_partido/torneo_partido_eliminar.html'
+    success_url = reverse_lazy('espicourts:torneo_partido_listar')
+
+
+def CrearReserva(request):
+    if request.method == 'POST':
+        form = ReservaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('espicourts:reservas_listar'))
+    else:
+        form=ReservaForm()
+    return render(request,'reservas/reservas_form.html',{'reservas_form':form})
+
+
+class ListarReserva(ListView):
+    model = Reserva
+    template_name = "reservas/reservas_listar.html"
+    context_object_name = "reservas"

@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 from django.contrib.auth.models import User
 
-from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo
+from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo, Torneo_Partido, Reserva
 
 
 class UsuarioForm(UserCreationForm):
@@ -166,4 +166,53 @@ class TorneoForm(forms.ModelForm):
             'fecha_final': forms.DateInput(attrs={'class':'form-control'}),
             'premio': forms.TextInput(attrs={'class':'form-control'}),
             'estado_torneo': forms.Select(attrs={'class': 'form-control'})
+        }
+
+
+class TorneoPartidoForm(forms.ModelForm):
+    class Meta:
+        model = Torneo_Partido
+        fields = [
+            'torneo',
+            'partido',
+        ]
+        labels = {
+            'torneo':'Torneo',
+            'partido':'Partido',
+
+        }
+        widgets = {
+            'torneo': forms.Select(attrs={'class': 'form-control'}),
+            'partido': forms.Select(attrs={'class': 'form-control'}),
+        }
+
+class ReservaForm(forms.ModelForm):
+    class Meta:
+        model = Reserva
+        fields = [
+            'fecha_reserva',
+            'hora_inicio',
+            'hora_final',
+            'cancha',
+            'usuario',
+            'abono',
+            'estado_reserva',
+        ]
+        labels = {
+            'fecha_reserva':'Fecha de la reserva',
+            'hora_inicio':'Hora de inicio',
+            'hora_final':'Hora final',
+            'cancha':'Cancha a reservar',
+            'usuario':'Usuario que la reserva',
+            'abono':'Monto abonado',
+            'estado_reserva':'Estado de la reserva',
+        }
+        widgets = {
+            'fecha_reserva': forms.DateInput(attrs={'class': 'form-control'}),
+            'hora_inicio': forms.TimeInput(attrs={'class': 'form-control'}),
+            'hora_final': forms.TimeInput(attrs={'class': 'form-control'}),
+            'cancha': forms.Select(attrs={'class': 'form-control'}),
+            'usuario': forms.Select(attrs={'class': 'form-control'}),
+            'abono': forms.TextInput(attrs={'class': 'form-control'}),
+            'estado_reserva':forms.Select(attrs={'class': 'form-control'}),
         }
