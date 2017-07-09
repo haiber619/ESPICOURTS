@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.contrib.auth.decorators import login_required
 
 from apps.inicio.views import DetalleCancha, ListarCancha, CrearCancha, EditarCancha, EliminarCancha, DetalleEquipo, \
     ListarEquipo, CrearEquipo, EditarEquipo, EliminarEquipo, CrearPartido, DetallePartido, ListarPartido, \
@@ -9,7 +10,7 @@ from apps.inicio.views import DetalleCancha, ListarCancha, CrearCancha, EditarCa
 urlpatterns = [
     url(r'^index/',Index, name='index'),
     url(r'^canchas_detalle/(?P<pk>\d+)/$', DetalleCancha.as_view(), name='canchas_detalle'),
-    url(r'^canchas_listar', ListarCancha.as_view(), name='canchas_listar'),
+    url(r'^canchas_listar', login_required(ListarCancha.as_view()), name='canchas_listar'),
     url(r'^canchas_crear', CrearCancha, name='canchas_crear'),
     url(r'^canchas_actualizar/(?P<id_cancha>\d+)/$', EditarCancha,name='canchas_actualizar'),
     url(r'^canchas_eliminar/(?P<pk>\d+)/$', EliminarCancha.as_view(),name='canchas_eliminar'),

@@ -3,44 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5b6a6dee-805e-42c8-97ae-058cab7e0fc7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/espicourts.sqlite3" afterPath="$PROJECT_DIR$/espicourts.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ESPICOURTS/settings.py" afterPath="$PROJECT_DIR$/ESPICOURTS/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/inicio/urls.py" afterPath="$PROJECT_DIR$/apps/inicio/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/inicio/views.py" afterPath="$PROJECT_DIR$/apps/inicio/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/base.html" afterPath="$PROJECT_DIR$/templates/base/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cancha/cancha_detalle.html" afterPath="$PROJECT_DIR$/templates/cancha/cancha_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cancha/cancha_form.html" afterPath="$PROJECT_DIR$/templates/cancha/cancha_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cancha/cancha_listar.html" afterPath="$PROJECT_DIR$/templates/cancha/cancha_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cancha/canchas_eliminar.html" afterPath="$PROJECT_DIR$/templates/cancha/canchas_eliminar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/equipo/equipo_detalle.html" afterPath="$PROJECT_DIR$/templates/equipo/equipo_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/equipo/equipo_eliminar.html" afterPath="$PROJECT_DIR$/templates/equipo/equipo_eliminar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/equipo/equipo_form.html" afterPath="$PROJECT_DIR$/templates/equipo/equipo_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/equipo/equipo_listar.html" afterPath="$PROJECT_DIR$/templates/equipo/equipo_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html" afterPath="$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventos_partido/evento_eliminar.html" afterPath="$PROJECT_DIR$/templates/eventos_partido/evento_eliminar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventos_partido/evento_form.html" afterPath="$PROJECT_DIR$/templates/eventos_partido/evento_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventos_partido/evento_listar.html" afterPath="$PROJECT_DIR$/templates/eventos_partido/evento_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/jugador/jugador_detalle.html" afterPath="$PROJECT_DIR$/templates/jugador/jugador_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/jugador/jugador_eliminar.html" afterPath="$PROJECT_DIR$/templates/jugador/jugador_eliminar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/jugador/jugador_form.html" afterPath="$PROJECT_DIR$/templates/jugador/jugador_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/jugador/jugador_listar.html" afterPath="$PROJECT_DIR$/templates/jugador/jugador_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/log/login.html" afterPath="$PROJECT_DIR$/templates/log/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/log/password_reset_complete.html" afterPath="$PROJECT_DIR$/templates/log/password_reset_complete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/log/password_reset_confirm.html" afterPath="$PROJECT_DIR$/templates/log/password_reset_confirm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/log/password_reset_done.html" afterPath="$PROJECT_DIR$/templates/log/password_reset_done.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/log/password_reset_form.html" afterPath="$PROJECT_DIR$/templates/log/password_reset_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partido/partido_detalle.html" afterPath="$PROJECT_DIR$/templates/partido/partido_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partido/partido_eliminar.html" afterPath="$PROJECT_DIR$/templates/partido/partido_eliminar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partido/partido_form.html" afterPath="$PROJECT_DIR$/templates/partido/partido_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partido/partido_listar.html" afterPath="$PROJECT_DIR$/templates/partido/partido_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_detalle.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_eliminar.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_eliminar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_form.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_listar.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/usuario/usuario_detalle.html" afterPath="$PROJECT_DIR$/templates/usuario/usuario_detalle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/usuario/usuario_eliminar.html" afterPath="$PROJECT_DIR$/templates/usuario/usuario_eliminar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/usuario/usuario_form.html" afterPath="$PROJECT_DIR$/templates/usuario/usuario_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/usuario/usuario_listar.html" afterPath="$PROJECT_DIR$/templates/usuario/usuario_listar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +25,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/inicio/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="93" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="93" />
+            <state relative-caret-position="295">
+              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -67,65 +34,63 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ESPICOURTS/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="password_reset_done.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/log/password_reset_done.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="395">
+              <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
               <folding>
-                <element signature="e#0#74#0" expanded="true" />
+                <element signature="e#0#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
+      <file leaf-file-name="usuario_form.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/usuario/usuario_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="37" column="9" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="51" column="68" lean-forward="false" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
+            <state relative-caret-position="250">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cancha_listar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cancha/cancha_listar.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/log/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/inicio/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="16" />
+            <state relative-caret-position="25">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -134,21 +99,11 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ESPICOURTS/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3050">
-              <caret line="125" column="51" lean-forward="false" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+            <state relative-caret-position="81">
+              <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="equipo_listar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/equipo/equipo_listar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -181,8 +136,6 @@
         <option value="$PROJECT_DIR$/apps/inicio/forms.py" />
         <option value="$PROJECT_DIR$/apps/inicio/models.py" />
         <option value="$PROJECT_DIR$/ESPICOURTS/settings.py" />
-        <option value="$PROJECT_DIR$/apps/inicio/urls.py" />
-        <option value="$PROJECT_DIR$/apps/inicio/views.py" />
         <option value="$PROJECT_DIR$/static/css/fondo.css" />
         <option value="$PROJECT_DIR$/templates/torneo/torneo_form.html" />
         <option value="$PROJECT_DIR$/templates/torneo/torneo_listar.html" />
@@ -204,7 +157,6 @@
         <option value="$PROJECT_DIR$/templates/log/login.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_complete.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_confirm.html" />
-        <option value="$PROJECT_DIR$/templates/log/password_reset_done.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_form.html" />
         <option value="$PROJECT_DIR$/templates/partido/partido_detalle.html" />
         <option value="$PROJECT_DIR$/templates/partido/partido_eliminar.html" />
@@ -215,10 +167,13 @@
         <option value="$PROJECT_DIR$/templates/usuario/usuario_listar.html" />
         <option value="$PROJECT_DIR$/templates/usuario/usuario_detalle.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/usuario/usuario_form.html" />
         <option value="$PROJECT_DIR$/templates/partido/partido_form.html" />
         <option value="$PROJECT_DIR$/templates/equipo/equipo_listar.html" />
         <option value="$PROJECT_DIR$/templates/base/base.html" />
+        <option value="$PROJECT_DIR$/templates/log/password_reset_done.html" />
+        <option value="$PROJECT_DIR$/apps/inicio/urls.py" />
+        <option value="$PROJECT_DIR$/apps/inicio/views.py" />
+        <option value="$PROJECT_DIR$/templates/usuario/usuario_form.html" />
       </list>
     </option>
   </component>
@@ -260,6 +215,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usuario" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,7 +556,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20521173" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13680781" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -637,16 +624,6 @@
         <state relative-caret-position="372">
           <caret line="308" column="4" lean-forward="true" selection-start-line="308" selection-start-column="4" selection-end-line="308" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ESPICOURTS/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-          <folding>
-            <element signature="e#644#685#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,14 +717,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/log/password_reset_confirm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/log/password_reset_done.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
@@ -858,14 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cancha/cancha_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-86">
@@ -898,14 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/usuario/usuario_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="66" column="7" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="66" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/partido/partido_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -930,16 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ESPICOURTS/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3050">
-          <caret line="125" column="51" lean-forward="false" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
-          <folding>
-            <element signature="e#314#323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cancha/cancha_listar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -950,38 +893,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="378">
+          <caret line="37" column="9" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/log/password_reset_done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ESPICOURTS/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#314#323#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ESPICOURTS/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/inicio/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="93" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="93" />
+        <state relative-caret-position="295">
+          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
+    <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="51" column="68" lean-forward="false" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
+        <state relative-caret-position="395">
+          <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/usuario/usuario_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding />
         </state>
       </provider>

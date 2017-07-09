@@ -1,4 +1,6 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import login
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -22,6 +24,7 @@ class ListarCancha(ListView):
     context_object_name = "canchas"
 
 
+@login_required(login_url='login')
 def CrearCancha(request):
     if request.method == 'POST':
         form = CanchaForm(request.POST)
