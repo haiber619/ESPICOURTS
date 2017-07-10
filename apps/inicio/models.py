@@ -103,13 +103,16 @@ class Reserva(models.Model):
     fecha_reserva=models.DateField()
     hora_inicio=models.TimeField()
     hora_final = models.TimeField()
-    cancha=models.OneToOneField(Cancha)
-    usuario=models.OneToOneField(User)
+    cancha=models.ForeignKey(Cancha)
+    usuario=models.ForeignKey(User)
     abono=models.DecimalField(max_digits=6,decimal_places=2)
     estados=((1,'Reservado'),(2,'Disponible'))
     estado_reserva=models.SmallIntegerField(choices=estados)
+
     class Meta:
         db_table='reserva'
+        unique_together = ('hora_inicio', 'cancha')
+
     def __str__(self):
         return "%s %s %s %s %s %s %s" % (self.fecha_reserva,self.hora_inicio,
                                          self.hora_final,self.cancha,self.usuario,

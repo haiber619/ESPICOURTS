@@ -186,15 +186,28 @@ class TorneoPartidoForm(forms.ModelForm):
             'partido': forms.Select(attrs={'class': 'form-control'}),
         }
 
+
+HORAS_HABILES = tuple([(i, i) for i in range(0, 24)])
+
+def time_in_range(start, end, x):
+    """Return true if x is in the range [start, end]"""
+    if start <= end:
+        return start <= x <= end
+    else:
+        return start <= x or x <= end
+
+
 class ReservaForm(forms.ModelForm):
+    hora_inicio = forms.ChoiceField(choices=HORAS_HABILES,
+                                    widget=forms.Select(attrs={'class': 'form-control'}))
+    hora_final = forms.ChoiceField(choices=HORAS_HABILES,
+                                   widget=forms.Select(attrs={'class': 'form-control'}))
+
     class Meta:
         model = Reserva
         fields = [
             'fecha_reserva',
-            'hora_inicio',
-            'hora_final',
             'cancha',
-            'usuario',
             'abono',
             'estado_reserva',
         ]
@@ -203,16 +216,41 @@ class ReservaForm(forms.ModelForm):
             'hora_inicio':'Hora de inicio',
             'hora_final':'Hora final',
             'cancha':'Cancha a reservar',
-            'usuario':'Usuario que la reserva',
             'abono':'Monto abonado',
             'estado_reserva':'Estado de la reserva',
         }
+
         widgets = {
             'fecha_reserva': forms.DateInput(attrs={'class': 'form-control'}),
-            'hora_inicio': forms.TimeInput(attrs={'class': 'form-control'}),
-            'hora_final': forms.TimeInput(attrs={'class': 'form-control'}),
             'cancha': forms.Select(attrs={'class': 'form-control'}),
-            'usuario': forms.Select(attrs={'class': 'form-control'}),
             'abono': forms.TextInput(attrs={'class': 'form-control'}),
             'estado_reserva':forms.Select(attrs={'class': 'form-control'}),
         }
+
+
+
+    def clean(self):
+        import datetime
+
+        cleaned_data = super(ReservaForm, self).clean()
+
+        hora_inicio = cleaned_data.get("hora_inicio")
+        cancha = cleaned_data.get("cancha")
+
+        reserva = Reserva.objects.filter(cancha=cleaned_data.get("cancha"),
+                                         hora_inicio=datetime.time(int(hora_inicio))).exists()
+        if reserva:
+            raise forms.ValidationError("ya existe una reserva con esta fecha")
+
+
+
+
+
+    def clean_hora_final(self):
+        hora_inicio = self.cleaned_data["hora_inicio"]
+        hora_final = self.cleaned_data["hora_final"]
+
+        if hora_final <= hora_inicio:
+            raise forms.ValidationError("La hora final no debe ser igual o inferior a la hora de inicio")
+
+        return hora_final

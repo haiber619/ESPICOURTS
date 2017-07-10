@@ -365,11 +365,18 @@ class EliminarTorneoPartido(DeleteView):
     template_name = 'torneo_partido/torneo_partido_eliminar.html'
     success_url = reverse_lazy('espicourts:torneo_partido_listar')
 
+import datetime
 
 def CrearReserva(request):
     if request.method == 'POST':
         form = ReservaForm(request.POST)
         if form.is_valid():
+            reserva = form.save(commit=False)
+
+            reserva.usuario = request.user
+            reserva.hora_inicio = datetime.time(int(form.cleaned_data["hora_inicio"]))
+            reserva.hora_final = datetime.time(int(form.cleaned_data["hora_final"]))
+
             form.save()
             return HttpResponseRedirect(reverse_lazy('espicourts:reservas_listar'))
     else:
