@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 from django.contrib.auth.models import User
 
+
 from apps.inicio.models import Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo, Torneo_Partido, Reserva
 
 
@@ -202,14 +203,12 @@ class ReservaForm(forms.ModelForm):
                                     widget=forms.Select(attrs={'class': 'form-control'}))
     hora_final = forms.ChoiceField(choices=HORAS_HABILES,
                                    widget=forms.Select(attrs={'class': 'form-control'}))
-
     class Meta:
         model = Reserva
         fields = [
             'fecha_reserva',
             'cancha',
             'abono',
-            'estado_reserva',
         ]
         labels = {
             'fecha_reserva':'Fecha de la reserva',
@@ -217,40 +216,34 @@ class ReservaForm(forms.ModelForm):
             'hora_final':'Hora final',
             'cancha':'Cancha a reservar',
             'abono':'Monto abonado',
-            'estado_reserva':'Estado de la reserva',
         }
 
         widgets = {
             'fecha_reserva': forms.DateInput(attrs={'class': 'form-control'}),
             'cancha': forms.Select(attrs={'class': 'form-control'}),
             'abono': forms.TextInput(attrs={'class': 'form-control'}),
-            'estado_reserva':forms.Select(attrs={'class': 'form-control'}),
         }
-
 
 
     def clean(self):
         import datetime
 
         cleaned_data = super(ReservaForm, self).clean()
-
         hora_inicio = cleaned_data.get("hora_inicio")
+        hora_final= cleaned_data.get("hora_final")
         cancha = cleaned_data.get("cancha")
-
+        fecha_reserva=cleaned_data.get("fecha_reserva")
         reserva = Reserva.objects.filter(cancha=cleaned_data.get("cancha"),
-                                         hora_inicio=datetime.time(int(hora_inicio))).exists()
+                                         hora_inicio=datetime.time(int(hora_inicio)),
+                                         fecha_reserva=cleaned_data.get("fecha_reserva")).exists()
         if reserva:
             raise forms.ValidationError("ya existe una reserva con esta fecha")
-
-
-
 
 
     def clean_hora_final(self):
         hora_inicio = self.cleaned_data["hora_inicio"]
         hora_final = self.cleaned_data["hora_final"]
-
         if hora_final <= hora_inicio:
             raise forms.ValidationError("La hora final no debe ser igual o inferior a la hora de inicio")
-
         return hora_final
+

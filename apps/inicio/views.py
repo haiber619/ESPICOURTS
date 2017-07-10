@@ -2,7 +2,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import login
 from django.http.response import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.urls.base import reverse, reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
@@ -57,6 +57,7 @@ class DetalleEquipo(DetailView):
     model = Equipo
     template_name = "equipo/equipo_detalle.html"
     context_object_name = "detalle_equipo"
+
 
 
 class ListarEquipo(ListView):
@@ -365,6 +366,19 @@ class EliminarTorneoPartido(DeleteView):
     template_name = 'torneo_partido/torneo_partido_eliminar.html'
     success_url = reverse_lazy('espicourts:torneo_partido_listar')
 
+
+class DetalleReserva(DetailView):
+    model = Reserva
+    template_name = "reservas/reservas_detalle.html"
+    context_object_name = "detalle_reserva"
+
+
+class ListarReserva(ListView):
+    model = Reserva
+    template_name = "reservas/reservas_listar.html"
+    context_object_name = "reservas"
+
+
 import datetime
 
 def CrearReserva(request):
@@ -372,11 +386,10 @@ def CrearReserva(request):
         form = ReservaForm(request.POST)
         if form.is_valid():
             reserva = form.save(commit=False)
-
             reserva.usuario = request.user
             reserva.hora_inicio = datetime.time(int(form.cleaned_data["hora_inicio"]))
             reserva.hora_final = datetime.time(int(form.cleaned_data["hora_final"]))
-
+            reserva.estado_reserva=1
             form.save()
             return HttpResponseRedirect(reverse_lazy('espicourts:reservas_listar'))
     else:
@@ -384,7 +397,7 @@ def CrearReserva(request):
     return render(request,'reservas/reservas_form.html',{'reservas_form':form})
 
 
-class ListarReserva(ListView):
+class EliminarReserva(DeleteView):
     model = Reserva
-    template_name = "reservas/reservas_listar.html"
-    context_object_name = "reservas"
+    template_name = 'reservas/reservas_eliminar.html'
+    success_url = reverse_lazy('espicourts:reservas_listar')

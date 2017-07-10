@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td>TIPO DE EVENTO</td>
-                <td>{{ detalle_evento.tipo_evento}}</td>
+                <td>{{ detalle_evento.get_tipo_evento_display}}</td>
             </tr>
             <tr>
                 <td>HORA DEL EVENTO</td>
@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td>JUGADOR</td>
-                <td>{{ detalle_evento.jugador}}</td>
+                <td>{{ detalle_evento.jugador.first_name}} {{ detalle_evento.jugador.last_name}}</td>
             </tr>
         </tbody>
     </table>

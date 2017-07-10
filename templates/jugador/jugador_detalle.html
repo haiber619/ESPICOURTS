@@ -10,7 +10,7 @@
         <tbody>
             <tr>
                 <td>TIPO DE IDENTIFICACION</td>
-                <td>{{ detalle_jugador.tipo_identifcacion }}</td>
+                <td>{{ detalle_jugador.get_tipo_identifcacion_display}}</td>
             </tr>
             <tr>
                 <td># IDENTIFICACION</td>
@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td>SEXO</td>
-                <td>{{ detalle_jugador.sexo}}</td>
+                <td>{{ detalle_jugador.get_sexo_display}}</td>
             </tr>
             <tr>
                 <td>EDAD</td>

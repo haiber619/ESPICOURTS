@@ -10,14 +10,15 @@
         <tbody>
             <tr>
                 <td>NOMBRE DEL EQUIPO</td>
-                <td>{{ detalle_equipo.nombre_equipo}}</td>
+                <td>{{ detalle_equipo}}</td>
             </tr>
             <tr>
                 <td>CATEGORIA DEL EQUIPO</td>
-                <td>{{ detalle_equipo.categoria_equipo}}</td>
+                <td>{{ detalle_equipo.get_categoria_equipo_display}}</td>
             </tr>
         </tbody>
     </table>
     <a href="{% url 'espicourts:equipos_listar' %}" button class="btn btn-success"> Listar Equipos</a>
 </div>
+
 {% endblock %}

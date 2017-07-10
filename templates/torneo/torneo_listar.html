@@ -23,7 +23,7 @@
                 <td>{{ c.id }}</td>
                 <td>{{ c.tipo_torneo}}</td>
                 <td>{{ c.fecha_inicio}}</td>
-                <td>{{ c.estado_torneo}}</td>
+                <td>{{ c.get_estado_torneo_display}}</td>
                 <td>
                      <a href="{% url 'espicourts:torneo_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
                 </td>

@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td>ESTADO DEL PARTIDO</td>
-                <td>{{ detalle_partido.estado_partido}}</td>
+                <td>{{ detalle_partido.get_estado_partido_display}}</td>
             </tr>
             <tr>
                 <td>HORA DE INICIO</td>
@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td>TIPO DE PARTIDO</td>
-                <td>{{ detalle_partido.tipo_partido}}</td>
+                <td>{{ detalle_partido.get_tipo_partido_display}}</td>
             </tr>
                 <td>RESULTADO</td>
                 <td>{{ detalle_partido.resultado}}</td>

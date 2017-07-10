@@ -7,7 +7,7 @@ from apps.inicio.views import DetalleCancha, ListarCancha, CrearCancha, EditarCa
     DetalleEvento, ListarEvento, CrearEvento, EditarEvento, EliminarEvento, DetalleJugador, ListarJugador, CrearJugador, \
     EditarJugador, EliminarJugador, DetalleTorneo, ListarTorneo, CrearTorneo, EditarTorneo, EliminarTorneo, Index, \
     DetalleTorneoPartido, ListarTorneoPartido, CrearTorneoPartido, EditarTorneoPartido, EliminarTorneoPartido, \
-    ListarReserva, CrearReserva
+    ListarReserva, CrearReserva, EliminarReserva, DetalleReserva
 
 urlpatterns = [
     url(r'^index/',Index, name='index'),
@@ -44,14 +44,16 @@ urlpatterns = [
     url(r'^torneos_detalle/(?P<pk>\d+)/$', login_required(DetalleTorneo.as_view()), name='torneo_detalle'),
     url(r'^torneos_listar', login_required(ListarTorneo.as_view()), name='torneos_listar'),
     url(r'^torneos_crear', login_required(CrearTorneo), name='torneos_crear'),
-    url(r'^torneos_actualizar/(?P<id_jugador>\d+)/$', login_required(EditarTorneo),name='torneos_actualizar'),
+    url(r'^torneos_actualizar/(?P<id_torneo>\d+)/$', login_required(EditarTorneo),name='torneos_actualizar'),
     url(r'^torneos_eliminar/(?P<pk>\d+)/$', login_required(EliminarTorneo.as_view()),name='torneos_eliminar'),
     url(r'^torneo_partido_detalle/(?P<pk>\d+)/$', login_required(DetalleTorneoPartido.as_view()), name='torneo_partido_detalle'),
     url(r'^torneo_partido_listar', login_required(ListarTorneoPartido.as_view()), name='torneo_partido_listar'),
     url(r'^torneo_partido_crear', login_required(CrearTorneoPartido), name='torneo_partido_crear'),
-    url(r'^torneo_partido_actualizar/(?P<id_jugador>\d+)/$', login_required(EditarTorneoPartido),name='torneo_partido_actualizar'),
+    url(r'^torneo_partido_actualizar/(?P<id_torneop>\d+)/$', login_required(EditarTorneoPartido),name='torneo_partido_actualizar'),
     url(r'^torneo_partido_eliminar/(?P<pk>\d+)/$', login_required(EliminarTorneoPartido.as_view()),name='torneo_partido_eliminar'),
+    url(r'^reservas_detalle/(?P<pk>\d+)/$', login_required(DetalleReserva.as_view()), name='reserva_detalle'),
     url(r'^reservas_listar', login_required(ListarReserva.as_view()), name='reservas_listar'),
     url(r'^reservas_crear', login_required(CrearReserva), name='reservas_crear'),
+    url(r'^reservas_eliminar/(?P<pk>\d+)/$', login_required(EliminarReserva.as_view()),name='reservas_eliminar'),
 
 ]

@@ -4,15 +4,26 @@
     <list default="true" id="5b6a6dee-805e-42c8-97ae-058cab7e0fc7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/espicourts.sqlite3" afterPath="$PROJECT_DIR$/espicourts.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ESPICOURTS/urls.py" afterPath="$PROJECT_DIR$/ESPICOURTS/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/inicio/forms.py" afterPath="$PROJECT_DIR$/apps/inicio/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/inicio/models.py" afterPath="$PROJECT_DIR$/apps/inicio/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/inicio/urls.py" afterPath="$PROJECT_DIR$/apps/inicio/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/inicio/views.py" afterPath="$PROJECT_DIR$/apps/inicio/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/base.html" afterPath="$PROJECT_DIR$/templates/base/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/equipo/equipo_detalle.html" afterPath="$PROJECT_DIR$/templates/equipo/equipo_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/equipo/equipo_listar.html" afterPath="$PROJECT_DIR$/templates/equipo/equipo_listar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html" afterPath="$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventos_partido/evento_listar.html" afterPath="$PROJECT_DIR$/templates/eventos_partido/evento_listar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/jugador/jugador_detalle.html" afterPath="$PROJECT_DIR$/templates/jugador/jugador_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partido/partido_detalle.html" afterPath="$PROJECT_DIR$/templates/partido/partido_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partido/partido_listar.html" afterPath="$PROJECT_DIR$/templates/partido/partido_listar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/reservas/reservas_detalle.html" afterPath="$PROJECT_DIR$/templates/reservas/reservas_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/reservas/reservas_eliminar.html" afterPath="$PROJECT_DIR$/templates/reservas/reservas_eliminar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/reservas/reservas_form.html" afterPath="$PROJECT_DIR$/templates/reservas/reservas_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/reservas/reservas_listar.html" afterPath="$PROJECT_DIR$/templates/reservas/reservas_listar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_detalle.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_eliminar.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_eliminar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo/torneo_listar.html" afterPath="$PROJECT_DIR$/templates/torneo/torneo_listar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/usuario/usuario_form.html" afterPath="$PROJECT_DIR$/templates/usuario/usuario_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_detalle.html" afterPath="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_detalle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html" afterPath="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_listar.html" afterPath="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_listar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +41,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ESPICOURTS/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="500">
               <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
@@ -40,8 +51,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/inicio/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="53" column="93" lean-forward="true" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
+            <state relative-caret-position="225">
+              <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -49,14 +60,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
+      <file leaf-file-name="torneo_partido_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="214" column="26" lean-forward="false" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="350">
+              <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,28 +73,30 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/inicio/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-111">
-              <caret line="102" column="35" lean-forward="false" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+            <state relative-caret-position="2725">
+              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base/base.html">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="4750">
+              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="382" column="36" lean-forward="true" selection-start-line="382" selection-start-column="36" selection-end-line="382" selection-end-column="36" />
+            <state relative-caret-position="125">
+              <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -93,21 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservas_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reservas_listar.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reservas_listar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_listar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            <state relative-caret-position="25">
+              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -130,8 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/partido/partidos_eliminar.html" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_email.html" />
         <option value="$PROJECT_DIR$/static/css/fondo.css" />
         <option value="$PROJECT_DIR$/templates/torneo/torneo_form.html" />
@@ -139,14 +138,10 @@
         <option value="$PROJECT_DIR$/templates/cancha/cancha_form.html" />
         <option value="$PROJECT_DIR$/templates/cancha/cancha_listar.html" />
         <option value="$PROJECT_DIR$/templates/cancha/canchas_eliminar.html" />
-        <option value="$PROJECT_DIR$/templates/equipo/equipo_detalle.html" />
         <option value="$PROJECT_DIR$/templates/equipo/equipo_eliminar.html" />
         <option value="$PROJECT_DIR$/templates/equipo/equipo_form.html" />
-        <option value="$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html" />
         <option value="$PROJECT_DIR$/templates/eventos_partido/evento_eliminar.html" />
         <option value="$PROJECT_DIR$/templates/eventos_partido/evento_form.html" />
-        <option value="$PROJECT_DIR$/templates/eventos_partido/evento_listar.html" />
-        <option value="$PROJECT_DIR$/templates/jugador/jugador_detalle.html" />
         <option value="$PROJECT_DIR$/templates/jugador/jugador_eliminar.html" />
         <option value="$PROJECT_DIR$/templates/jugador/jugador_form.html" />
         <option value="$PROJECT_DIR$/templates/jugador/jugador_listar.html" />
@@ -154,33 +149,39 @@
         <option value="$PROJECT_DIR$/templates/log/password_reset_complete.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_form.html" />
-        <option value="$PROJECT_DIR$/templates/partido/partido_detalle.html" />
         <option value="$PROJECT_DIR$/templates/partido/partido_eliminar.html" />
-        <option value="$PROJECT_DIR$/templates/partido/partido_listar.html" />
-        <option value="$PROJECT_DIR$/templates/torneo/torneo_eliminar.html" />
         <option value="$PROJECT_DIR$/templates/usuario/usuario_eliminar.html" />
         <option value="$PROJECT_DIR$/templates/usuario/usuario_listar.html" />
         <option value="$PROJECT_DIR$/templates/usuario/usuario_detalle.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/partido/partido_form.html" />
-        <option value="$PROJECT_DIR$/templates/equipo/equipo_listar.html" />
         <option value="$PROJECT_DIR$/templates/log/password_reset_done.html" />
         <option value="$PROJECT_DIR$/ESPICOURTS/settings.py" />
         <option value="$PROJECT_DIR$/ESPICOURTS/urls.py" />
         <option value="$PROJECT_DIR$/templates/usuario/usuario_form.html" />
-        <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html" />
-        <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_detalle.html" />
-        <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_eliminar.html" />
+        <option value="$PROJECT_DIR$/templates/base/base.html" />
+        <option value="$PROJECT_DIR$/templates/reservas/reservas_eliminar.html" />
+        <option value="$PROJECT_DIR$/apps/inicio/models.py" />
+        <option value="$PROJECT_DIR$/templates/reservas/reservas_form.html" />
+        <option value="$PROJECT_DIR$/apps/inicio/forms.py" />
+        <option value="$PROJECT_DIR$/templates/reservas/reservas_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/jugador/jugador_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/equipo/equipo_listar.html" />
+        <option value="$PROJECT_DIR$/templates/equipo/equipo_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/partido/partido_listar.html" />
+        <option value="$PROJECT_DIR$/templates/partido/partido_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/eventos_partido/evento_listar.html" />
+        <option value="$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html" />
         <option value="$PROJECT_DIR$/templates/torneo/torneo_listar.html" />
-        <option value="$PROJECT_DIR$/templates/torneo/torneo_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_detalle.html" />
         <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_listar.html" />
+        <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_eliminar.html" />
+        <option value="$PROJECT_DIR$/templates/torneo/torneo_eliminar.html" />
+        <option value="$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html" />
+        <option value="$PROJECT_DIR$/templates/torneo/torneo_detalle.html" />
+        <option value="$PROJECT_DIR$/apps/inicio/views.py" />
         <option value="$PROJECT_DIR$/apps/inicio/urls.py" />
         <option value="$PROJECT_DIR$/templates/reservas/reservas_listar.html" />
-        <option value="$PROJECT_DIR$/apps/inicio/models.py" />
-        <option value="$PROJECT_DIR$/apps/inicio/forms.py" />
-        <option value="$PROJECT_DIR$/templates/base/base.html" />
-        <option value="$PROJECT_DIR$/apps/inicio/views.py" />
-        <option value="$PROJECT_DIR$/templates/reservas/reservas_form.html" />
       </list>
     </option>
   </component>
@@ -235,6 +236,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="torneo_partido" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ESPICOURTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reservas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,6 +350,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -552,10 +590,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20543806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21450152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -563,7 +601,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16449511" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -583,27 +621,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/fondo.css" />
-    <entry file="file://$PROJECT_DIR$/templates/cancha/canchas_eliminar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/equipo/equipo_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/equipo/equipo_eliminar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -620,14 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/eventos_partido/evento_eliminar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -637,22 +652,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/eventos_partido/evento_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eventos_partido/evento_listar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/jugador/jugador_detalle.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
@@ -699,31 +698,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partido/partido_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/partido/partido_eliminar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partido/partido_listar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo/torneo_eliminar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
@@ -767,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,14 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/equipo/equipo_listar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cancha/cancha_listar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -839,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +813,7 @@
         <state relative-caret-position="231">
           <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding>
-            <element signature="e#314#323#0" expanded="true" />
+            <element signature="e#314#323#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -877,121 +842,201 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_eliminar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo/torneo_listar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-344">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo/torneo_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="143" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="143" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_listar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-569">
-          <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ESPICOURTS/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="53" column="93" lean-forward="true" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="102" column="35" lean-forward="false" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="214" column="26" lean-forward="false" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="1175">
           <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_listar.html">
+    <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_eliminar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        <state relative-caret-position="125">
+          <caret line="5" column="66" lean-forward="false" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        <state relative-caret-position="25">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/jugador/jugador_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="28" column="55" lean-forward="false" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/equipo/equipo_listar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/equipo/equipo_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partido/partido_listar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partido/partido_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="28" column="63" lean-forward="false" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventos_partido/evento_listar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventos_partido/evento_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="94" lean-forward="false" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo/torneo_listar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="24" column="75" lean-forward="false" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_listar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="35" column="77" lean-forward="false" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo/torneo_eliminar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_eliminar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo_partido/torneo_partido_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/torneo/torneo_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/inicio/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2725">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4750">
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ESPICOURTS/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="382" column="36" lean-forward="true" selection-start-line="382" selection-start-column="36" selection-end-line="382" selection-end-column="36" />
+        <state relative-caret-position="125">
+          <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/inicio/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reservas/reservas_listar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

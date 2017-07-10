@@ -15,6 +15,7 @@
                 <th>CANCHA</th>
                 <th>FECHA </th>
                 <th>HORA INICIO</th>
+                <th>HORA FINAL</th>
                 <th>ESTADO DE LA RESERVA</th>
             </tr>
         </thead>
@@ -25,15 +26,13 @@
                 <td>{{ c.cancha.nombre_cancha}}</td>
                 <td>{{ c.fecha_reserva}}</td>
                 <td>{{ c.hora_inicio}}</td>
-                <td>{{ c.estado_reserva}}</td>
+                <td>{{ c.hora_final}}</td>
+                <td>{{ c.get_estado_reserva_display}}</td>
                 <td>
-                     <a href="{% url 'espicourts:usuario_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
+                     <a href="{% url 'espicourts:reserva_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
                 </td>
                 <td>
-                     <a href="{% url 'espicourts:usuarios_actualizar' c.id %}" button class="btn btn-primary"> Actualizar</a>
-                </td>
-                <td>
-                     <a href="{% url 'espicourts:usuarios_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
+                     <a href="{% url 'espicourts:reservas_eliminar' c.id %}" button class="btn btn-danger"> Eliminar</a>
                 </td>
             </tr>
             {% endfor %}

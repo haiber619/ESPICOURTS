@@ -11,7 +11,8 @@
        {{ torneo_partido_form.as_p }}
         <br>
         <button type="submit" class="btn btn-primary ">Guardar</button>
-        <a href="{% url 'espicourts:torneo_partido_listar' %}" button class="btn btn-success"> Listar Torneos</a>
+        <a href="{% url 'espicourts:torneo_partido_listar' %}" button class="btn btn-success"> Listar Partidos</a>
+        <a href="{% url 'espicourts:torneos_listar' %}" button class="btn btn-danger"> Listar Torneos</a>
     </form>
 </div>
 {% endblock %}

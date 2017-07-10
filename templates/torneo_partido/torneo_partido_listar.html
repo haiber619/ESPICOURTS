@@ -18,7 +18,7 @@
         <tbody>
             {% for c in torneos_partidos%}
             <tr>
-                <td>{{ c.torneo.id }}</td>
+                <td>{{ c.torneo.nombre_torneo }}</td>
                 <td>{{ c.partido.id}}</td>
                 <td>
                      <a href="{% url 'espicourts:torneo_partido_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
@@ -33,5 +33,6 @@
             {% endfor %}
         </tbody>
     </table>
+<a href="{% url 'espicourts:torneos_listar' %}" button class="btn btn-success"> Listar torneos</a>
 </div>
 {% endblock%}

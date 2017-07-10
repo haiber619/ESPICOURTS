@@ -23,7 +23,7 @@
                 <td>{{ c.id }}</td>
                 <td>{{ c.fecha_partido}}</td>
                 <td>{{ c.hora_inicio}}</td>
-                <td>{{ c.estado_partido}}</td>
+                <td>{{ c.get_estado_partido_display}}</td>
                 <td>
                      <a href="{% url 'espicourts:partidos_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
                 </td>

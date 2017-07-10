@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td>TIPO DE TORNEO</td>
-                <td>{{ detalle_torneo.tipo_torneo}}</td>
+                <td>{{ detalle_torneo.get_tipo_torneo_display}}</td>
             </tr>
             <tr>
                 <td>NOMBRE DEL TORNEO</td>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td>ESTADO DEL TORNEO</td>
-                <td>{{ detalle_torneo.estado_torneo}}</td>
+                <td>{{ detalle_torneo.get_estado_torneo_display}}</td>
             </tr>
         </tbody>
     </table>

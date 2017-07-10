@@ -21,7 +21,7 @@
             <tr>
                 <td>{{ c.id }}</td>
                 <td>{{ c.nombre_equipo}}</td>
-                <td>{{ c.categoria_equipo}}</td>
+                <td>{{ c.get_categoria_equipo_display}}</td>
                 <td>
                      <a href="{% url 'espicourts:equipos_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
                 </td>

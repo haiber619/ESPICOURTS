@@ -19,7 +19,7 @@
             {% for c in eventos%}
             <tr>
                 <td>{{ c.partido.id }}</td>
-                <td>{{ c.tipo_evento}}</td>
+                <td>{{ c.get_tipo_evento_display}}</td>
                 <td>{{ c.hora_evento}}</td>
                 <td>
                      <a href="{% url 'espicourts:evento_detalle' c.id %}" button class="btn btn-success"> Detalle</a>
