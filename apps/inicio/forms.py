@@ -68,6 +68,7 @@ class PartidoForm(forms.ModelForm):
             'hora_fin':'Hora de finalizacion',
             'tipo_partido': 'Tipo de partido',
             'resultado': 'Resultado',
+            'estado_partido': 'Estado del partido',
             'cancha': 'Cancha',
             'local': 'Equipo local',
             'visitante': 'Equipo visitante',
@@ -78,6 +79,7 @@ class PartidoForm(forms.ModelForm):
             'hora_fin':forms.TimeInput(attrs={'class':'form-control'}),
             'tipo_partido': forms.Select(attrs={'class': 'form-control'}),
             'resultado': forms.TextInput(attrs={'class':'form-control'}),
+            'estado_partido': forms.Select(attrs={'class':'form-control'}),
             'cancha': forms.Select(attrs={'class':'form-control'}),
             'local': forms.Select(attrs={'class': 'form-control'}),
             'visitante': forms.Select(attrs={'class': 'form-control'}),
@@ -178,7 +180,7 @@ class TorneoPartidoForm(forms.ModelForm):
             'partido',
         ]
         labels = {
-            'torneo':'Torneo',
+            'torneo':'Partido',
             'partido':'Partido',
 
         }
