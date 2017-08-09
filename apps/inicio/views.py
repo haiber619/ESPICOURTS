@@ -10,7 +10,7 @@ from django.views.generic.list import ListView
 from apps.inicio.forms import CanchaForm, PartidoForm, EquipoForm, UsuarioForm, EventoForm, JugadorForm, TorneoForm, \
     TorneoPartidoForm, ReservaForm
 from apps.inicio.models import User, Cancha, Equipo, Partido, EventoPartido, Jugador, Torneo, Torneo_Partido, Reserva
-
+from django.core import serializers
 
 class DetalleCancha(DetailView):
     model = Cancha
@@ -337,11 +337,18 @@ class ListarTorneoPartido(ListView):
     template_name = "torneo_partido/torneo_partido_listar.html"
     context_object_name = "torneos_partidos"
 
+    def get_queryset(self):
+        queryset = super(ListarTorneoPartido, self).get_queryset()
+        return queryset.filter(torneo=1)
 
-def CrearTorneoPartido(request):
+
+
+def CrearTorneoPartido(request,idtorneo):
     if request.method == 'POST':
         form = TorneoPartidoForm(request.POST)
         if form.is_valid():
+            torneop=form.save(False)
+            torneop.torneo=idtorneo
             form.save()
             return HttpResponseRedirect(reverse_lazy('espicourts:torneo_partido_listar'))
     else:
@@ -377,6 +384,7 @@ class ListarReserva(ListView):
     model = Reserva
     template_name = "reservas/reservas_listar.html"
     context_object_name = "reservas"
+    paginate_by = 8
 
 
 import datetime
@@ -401,3 +409,5 @@ class EliminarReserva(DeleteView):
     model = Reserva
     template_name = 'reservas/reservas_eliminar.html'
     success_url = reverse_lazy('espicourts:reservas_listar')
+
+

@@ -176,16 +176,13 @@ class TorneoPartidoForm(forms.ModelForm):
     class Meta:
         model = Torneo_Partido
         fields = [
-            'torneo',
             'partido',
         ]
         labels = {
-            'torneo':'Partido',
             'partido':'Partido',
 
         }
         widgets = {
-            'torneo': forms.Select(attrs={'class': 'form-control'}),
             'partido': forms.Select(attrs={'class': 'form-control'}),
         }
 
